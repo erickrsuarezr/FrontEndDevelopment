@@ -276,3 +276,24 @@ body{
     letter-spacing: 1px;
     margin: 10px 0px;
 }
+
+/* Estilos para el footer */
+
+.footer{
+    display: flex;
+    align-items: center;
+    height: 100px;
+    width: 100%;
+}
+
+.footer a{
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    padding-inline-start: 30px;
+    text-decoration: none;
+}
+
+.footer a:hover{
+    text-decoration: underline;
+}
