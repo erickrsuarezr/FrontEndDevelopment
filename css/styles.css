@@ -74,7 +74,7 @@ body{
     font-size: 25px;
 }
 
-.main__title .input{
+.main .input{
     background-color: rgba(255, 255, 255, 0.1);
     border: 2px solid white;
     border-radius: 30px;
@@ -87,7 +87,7 @@ body{
     outline: none;
 }
 
-.main__title .input::placeholder{
+.main .input::placeholder{
     color: white;
 }
 
@@ -296,4 +296,19 @@ body{
 
 .footer a:hover{
     text-decoration: underline;
+}
+
+
+@media (max-width: 600px) {
+    .login__container{
+        background-color: transparent;
+        border: none;
+        padding: 0;
+        width: 100%;
+    }
+
+    .footer{
+        align-items: flex-start;
+        flex-direction: column;
+    }
 }
