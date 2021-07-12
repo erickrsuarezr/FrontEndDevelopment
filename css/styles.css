@@ -66,12 +66,17 @@ body{
 /* Styles section main */
 
 .main{
-    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 300px;   
 }
 
 .main__title{
     color: white;
     font-size: 25px;
+    margin-block-end: 30px;
 }
 
 .main .input{
@@ -89,6 +94,14 @@ body{
 
 .main .input::placeholder{
     color: white;
+}
+
+.categories__title{
+    color: white;
+    font-size: 16px;
+    position: absolute;
+    padding-inline-start: 30px;
+    width: 100%;
 }
 
 /* styles section carousel */
