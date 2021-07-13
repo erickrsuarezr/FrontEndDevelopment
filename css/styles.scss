@@ -1,0 +1,373 @@
+$color-claro: white;
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Mulish', sans-serif;
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(73,63,92,1) 35%, rgba(148,141,166,1) 100%);
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 80px;
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(73,63,92,1) 35%, rgba(148,141,166,1) 100%);
+    align-items: center;
+}
+
+.header__img{
+    width: 200px;
+    margin-block-start: 10px;
+    margin-inline-start: 10px;
+}
+
+.header__menu{
+    margin-inline-end: 30px;
+}
+
+.header__menu:hover ul, ul:hover{
+    display: block;
+}
+
+.header__menu ul{
+    display: none;
+    list-style: none;
+    padding: 0;
+    position: absolute;
+    width: 100px;
+    text-align: right;
+}
+
+.header__menu li{
+    margin: 10px 0px;
+}
+
+.header__menu li a{
+    color: $color-claro;
+    text-decoration: none;
+}
+
+.header__menu li a:hover{
+    text-decoration: underline;
+}
+
+.header__menu--profile{
+    margin-inline-end: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.header__menu--profile p{
+    margin-inline-start:10px;
+    color: $color-claro;
+}
+
+/* Styles section main */
+
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 300px;   
+}
+
+.main__title{
+    color: $color-claro;
+    font-size: 25px;
+    margin-block-end: 30px;
+}
+
+.main .input{
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px solid $color-claro;
+    border-radius: 30px;
+    color: $color-claro;
+    font-family: 'Mulish', sans-serif;
+    font-size: 16px;
+    height: 50px;
+    padding: 0px 20px;
+    width: 70%;
+    outline: none;
+}
+
+.main .input::placeholder{
+    color: $color-claro;
+}
+
+.categories__title{
+    color: $color-claro;
+    font-size: 16px;
+    position: absolute;
+    padding-inline-start: 30px;
+    width: 100%;
+}
+
+/* styles section carousel */
+.carousel{
+    width: 100%;
+    overflow: scroll;
+    padding: 30px;
+    position: relative;
+}
+
+.carousel__container{
+    white-space: nowrap;
+    margin: 70px 0px;
+    padding-block-end: 10px;
+}
+
+.carousel-item{
+    display: inline-block;
+    background-color: turquoise;
+    width: 200px;
+    height: 250px;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-inline-end: 10px;
+    cursor: pointer;
+    transition: 450ms all;
+    transform-origin: center left;
+    position: relative;
+}
+
+.carousel-item:hover ~ .carousel-item{
+    transform: translate3d(100px, 0, 0);
+}
+
+.carousel__container:hover .carousel-item{
+    opacity: 0.3;
+}
+
+.carousel__container:hover .carousel-item:hover{
+    transform: scale(1.5);
+    opacity: 1;
+}
+
+.carousel-item__img{
+    width: 200px;
+    height: 250px;
+    object-fit: cover;
+}
+
+.carousel-item__details{
+    background:linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 100%);
+    font-size: 10px;
+    opacity: 0;
+    transition: 450ms opacity;
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+
+.carousel-item__details img{
+    height: 15px;
+}
+.carousel-item__details p{
+    margin: 0px;
+}
+
+.carousel-item__details:hover {
+    opacity: 1;
+    color: $color-claro;
+}
+
+/* Estilos para el login */
+
+.login{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0px 30px;
+    min-height: calc(100vh - 200px);
+}
+
+.login__container{
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 2px solid $color-claro;
+    border-radius: 40px;
+    color: $color-claro;
+    padding: 60px 68px 40px;
+    min-height: 700px;
+    width: 400px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+
+.login__container--form{
+    display: flex;
+    flex-direction: column;
+}
+
+.login__container--form label{
+    font-size: 14px;
+}
+
+.login__container--remember-me{
+    color: $color-claro;
+    display: flex;
+    justify-content: space-between;
+    margin-block-start: 10px;
+}
+
+.login__container--remember-me a{
+    color: $color-claro;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.login__container--remember-me a:hover{
+    text-decoration: underline;
+}
+
+.login__container--social-media > div{
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    margin-block-end:10px ;
+
+}
+
+.login__container--social-media > div > img{
+    width: 30px;
+    margin-inline-end: 10px;
+}
+
+.login__container--register{
+    font-size: 14px;
+}
+
+.login__container--register a{
+    font-size: 16px;
+    color: $color-claro;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.login__container--register a:hover{
+    text-decoration: underline;
+}
+
+.login__container--form .input{
+    background-color: transparent;
+    border-inline-start: 0px;
+    border-block-start: 0px;
+    border-inline-end: 0px;
+    border-block-end: 2px solid $color-claro;
+    font-family: 'Mulish', sans-serif;
+    font-size: 16px;
+    margin-block-end: 10px;
+    padding: 0px 20px;
+    outline: none;
+    height: 50px;
+}
+
+.login__container--form .input::placeholder{
+    color: $color-claro;
+}
+
+.login__container--form .button, .not-found__container-info .button{
+    background-color: rgba(255, 255, 255, 0.1);
+    border:none;
+    border-radius: 25px;
+    color: $color-claro;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'Mulish', sans-serif;
+    height: 50px;
+    letter-spacing: 1px;
+    margin: 10px 0px;
+}
+
+/* Estilos para el footer */
+
+.footer{
+    display: flex;
+    align-items: center;
+    height: 100px;
+    width: 100%;
+}
+
+.footer a{
+    color: $color-claro;
+    cursor: pointer;
+    font-size: 14px;
+    padding-inline-start: 30px;
+    text-decoration: none;
+}
+
+.footer a:hover{
+    text-decoration: underline;
+}
+
+
+@media (max-width: 600px) {
+    .login__container{
+        background-color: transparent;
+        border: none;
+        padding: 0;
+        width: 100%;
+    }
+
+    .footer{
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+
+/* Estilos error 404 */
+
+.not-found{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+    height: calc(100vh - 180px);
+}
+
+.not-found img{
+    width: 540px;
+    height: 450px;
+}
+
+.not-found__container-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.not-found__container-info p:nth-child(1){
+    font-size: 64px;
+    font-family: 'Space Mono', monospace;
+    font-weight: 700;
+}
+
+.not-found__container-info p:nth-child(2){
+    font-size: 24px;
+    font-family: 'Space Mono', monospace;
+    font-weight: 400;
+}
+.not-found__container-info .button {
+    width: 100%;
+}
+
+.not-found__container-info .button a{
+    font-family: 'Space Mono', monospace;
+    color: $color-claro;
+    text-decoration: none;
+}
